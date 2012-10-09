@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+test/test_core.py
+warlock/__init__.py
+warlock/core.py
+warlock.egg-info/PKG-INFO
+warlock.egg-info/SOURCES.txt
+warlock.egg-info/dependency_links.txt
+warlock.egg-info/requires.txt
+warlock.egg-info/top_level.txt
