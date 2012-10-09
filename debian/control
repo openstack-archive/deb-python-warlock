@@ -1,0 +1,17 @@
+Source: python-warlock
+Section: python
+Priority: optional
+Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
+Uploaders: Thomas Goirand <zigo@debian.org>
+Build-Depends: debhelper (>= 9), python-setuptools,  python-all (>= 2.6.6-3~),
+ python-jsonschema, python-nose
+Standards-Version: 3.9.3
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/python-warlock.git
+Vcs-Git: git://anonscm.debian.org/openstack/python-warlock.git
+Homepage: http://pypi.python.org/pypi/warlock/0.0.1
+
+Package: python-warlock
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, python-jsonschema
+Description: Python object model built on top of JSON schema.
+ Build self-validating python objects using JSON schemas

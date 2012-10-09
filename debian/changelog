@@ -1,0 +1,5 @@
+python-warlock (0.4.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #687510).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 09 Oct 2012 11:55:15 +0000
