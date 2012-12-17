@@ -2,26 +2,12 @@
 
 #export DH_VERBOSE=1
 
-DEBVERS := $(shell dpkg-parsechangelog | sed -n -e 's/^Version: //p')
-VERSION := $(shell echo '$(DEBVERS)' | sed -e 's/^[[:digit:]]*://' -e 's/[~-].*//')
-DEBFLAVOR :=$(shell dpkg-parsechangelog | grep -E ^Distribution: | cut -d" " -f2)
-DEBPKGNAME :=$(shell dpkg-parsechangelog | grep -E ^Source: | cut -d" " -f2)
+UPSTREAM_GIT = git://github.com/bcwaldon/warlock.git
+
+include /usr/share/openstack-pkg-tools/pkgos.make
 
 %:
 	dh $@  --with python2
 
-get-orig-source:
-	uscan --verbose --force-download --rename --repack --download-current-version --destdir=../build-area
-
 override_dh_auto_test:
 	nosetests
-
-get-vcs-source:
-	if ! git checkout master ; then \
-		echo "No upstream branch: checking out" ; \
-		git checkout -b master upstream/master ; \
-	fi
-	git checkout debian/experimental
-	if [ ! -f ../$(DEBPKGNAME)_$(VERSION).orig.tar.xz ] ; then \
-		git archive --prefix=$(DEBPKGNAME)-$(VERSION)/ $(VERSION) | xz >../$(DEBPKGNAME)_$(VERSION).orig.tar.xz ; \
-	fi
