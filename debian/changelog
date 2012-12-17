@@ -1,4 +1,4 @@
-python-warlock (0.4.0-1) unstable; urgency=low
+python-warlock (0.4.0-1) experimental; urgency=low
 
   * Initial release (Closes: #687510).
 
