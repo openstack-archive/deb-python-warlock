@@ -3,7 +3,7 @@ Upstream-Name: python-warlock
 Source: git://github.com/bcwaldon/warlock.git
 
 Files: *
-Copyright: 2012 Brian Waldon
+Copyright: 2012 Brian Waldon <bcwaldon@gmail.com>
 License: Apache-2
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
