@@ -17,7 +17,7 @@ Homepage: http://pypi.python.org/pypi/warlock
 Package: python-warlock
 Architecture: all
 Pre-Depends: dpkg (>= 1.15.6~)
-Depends: ${python:Depends}, ${misc:Depends}, python-jsonschema
+Depends: ${python:Depends}, ${misc:Depends}, python-jsonschema (>= 0.7), python-json-patch (>= 0.10)
 Description: object model built on top of JSON schema
  With python-warlock, you can build self-validating Python objects using JSON
  schemas. First, a schema describe the type of data, then after creating the
