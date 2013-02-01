@@ -1,5 +1,303 @@
-commit aff4147a6c863ef4f8345fe7f70d62e05f22b52a
-Author: Thomas Goirand <thomas@goirand.fr>
-Date:   Tue Oct 9 11:59:02 2012 +0000
+commit 694756c2cdf4a02c81e19daaa2103d3bda438e92
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Thu Jan 31 07:37:58 2013 -0800
 
-    Initial 0.4.0 upstream sources.
+    Bump version to 0.8.1
+
+commit 6d13c02ad48e0d2f7a095f040228757208452259
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Thu Jan 31 07:24:00 2013 -0800
+
+    Update README with JSON Patch example
+    
+    Also, replace the remaining tabs with spaces.
+
+commit c55fca16a5980562ee226238c6fd45f1149c83c6
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Thu Jan 31 07:17:02 2013 -0800
+
+    Move HACKING to HACKING.txt
+
+commit c4d87ac700d3849bcb8140cbf8a2e9475a50c449
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Thu Jan 31 07:16:37 2013 -0800
+
+    Add license headers to source files
+
+commit 286c8dbcc363edefadb1e7591fe60d9edc9e9f5e
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sun Jan 20 15:00:29 2013 -0800
+
+    Update version to 0.8.0
+
+commit d5cdd5c561c6587db1e46e400402b365d72a5bf6
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sun Jan 20 15:07:35 2013 -0800
+
+    Relax jsonpatch dep to >=0.10,<=0.12
+
+commit 455fe617d9ff09963806aa020c11a907c8253727
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sat Dec 22 15:28:21 2012 -0800
+
+    Rename Model method validator to validate
+
+commit c0e7fba643b69d078ea16ead675432449e4b3185
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sat Dec 22 15:27:57 2012 -0800
+
+    Adding documentation of Model methods
+
+commit c2c446193089a717a9cbc3eeca73c1a30a0f7b6b
+Author: Rob <rob.s.brit@gmail.com>
+Date:   Tue Nov 27 13:22:57 2012 -0500
+
+    Made validator inheritable by base classes.
+
+commit 98a44c660136b7089cf3e8ed95254b475ab4d085
+Author: Rob <rob.s.brit@gmail.com>
+Date:   Tue Nov 27 11:16:13 2012 -0500
+
+    Break up core pieces into separate modules
+    
+    - Create model.py to hold the core Model class
+    - Create exceptions.py to hold all custom exceptions
+
+commit e8f0a5ade79156cfe18ae5ec25c5737cc1f7e532
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Mon Nov 26 12:26:25 2012 -0500
+
+    Bump version to 0.7.0
+
+commit c265073862706e48965b0e6312e281fcb726d8fa
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Mon Nov 26 11:41:14 2012 -0500
+
+    Use jsonpatch to provide a JSON patch document
+    
+    The attribute "patch" of a model now returns a string
+    representing all of the operations that have occurred
+    on the model since it was created in JSON patch form.
+
+commit ec39437bfd7a710e5ac5d4e4ca3236391c90998a
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Mon Nov 26 11:40:09 2012 -0500
+
+    Allow delattr and del operations
+
+commit d34e169d1eb97b6fa84acf39ec2722d9ce77eaba
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Mon Nov 19 14:08:18 2012 -0800
+
+    Update README to reflect exception output
+
+commit c8e3fbd246f65d4c2da8088cff1d752f65d63bf7
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Mon Nov 19 14:00:54 2012 -0800
+
+    Bump version to 0.6.0
+
+commit 40abb76f3bfa45501b1c085577d6aa0dfb9f6c4d
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Mon Nov 19 13:59:22 2012 -0800
+
+    Add helful text to Exceptions
+    
+    Fixes issue #2
+
+commit cd69c88a692e1ffbdcc5ceafd2dab45ec20d38d5
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Mon Nov 19 13:45:37 2012 -0800
+
+    Update jsonschema dep to >=0.7,<1
+
+commit 53c43921c8e087f86c4852c06aedce49fa522854
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Tue Oct 9 10:53:11 2012 -0700
+
+    Bump version to 0.5.0
+
+commit 26df3051f7c331c9fa9c69ab0ccba47d8dad4613
+Merge: 0a6f016 1001d39
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Mon Oct 8 17:13:02 2012 -0700
+
+    Merge pull request #1 from termie/dict_base
+    
+    switch to a dict-based object
+
+commit 1001d393fe6012ef5c0a2d1cc7744fd5f240aea6
+Author: termie <github@anarkystic.com>
+Date:   Mon Oct 8 16:14:32 2012 -0700
+
+    switch to a dict-based object
+
+commit 0a6f016295dc7609bf88b1d36458aeab2aeb4014
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sun Jul 29 20:13:57 2012 -0700
+
+    Add 'changes' attribute to models
+    
+    The 'changes' attribute returns a dictionary representing the state
+    of any top-level properties that have been changed since the object
+    was instantiated.
+    
+    Bump version to v0.4.0
+
+commit 69aed68984cf4aba359193e143b63c7d54a91414
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jul 27 12:55:50 2012 -0700
+
+    Refactor attribute access methods
+    
+    Clean up the implementation of the __getattr__, __setattr__,
+    __getitem__, and __setitem__ methods.
+    
+    This does fix a bug where a lookup using dict-like syntax would
+    raise an AttribtueError. That will now correctly raise a KeyError.
+    
+    Bump version to v0.3.1
+
+commit f2b38319ba986c566dc9aaaf74747facfe1a1b0c
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jul 27 12:45:24 2012 -0700
+
+    Add items method to model
+    
+    This is similar to the iteritems method in implementation - it exposes
+    the 'items' method of the internal dictionary.
+    
+    Bump version to v0.3.0
+
+commit 2c24556370b82dac6f97d316ec75931a74987b86
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jul 27 11:28:01 2012 -0700
+
+    Enable dict-style access to models
+    
+    Allow get and set of model attributes using dict-like
+    syntax (i.e. model['attribute'] = 'value').
+    
+    Bump version to 0.2.0
+
+commit d93ca7833f4907939507bc99648de4d4d6eb0616
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jul 13 17:55:14 2012 -0700
+
+    Bump version to v0.1.0
+
+commit 0e64e19d22d5972001c593e516eaf460b8a94866
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jul 13 17:54:32 2012 -0700
+
+    Add iteritems method to model
+
+commit 02833d7c24e9f26d982e2412bbee33aa55b423f1
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jul 13 17:46:34 2012 -0700
+
+    Bump version to v0.0.2
+
+commit f25ce31640ec30429cd6408ee6e768e9788f9af3
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Thu Jun 7 13:27:46 2012 -0700
+
+    Cast schema name to string
+
+commit d5a35f967616d527c17abe97dca4140da3b29951
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sat Jun 2 12:44:12 2012 -0700
+
+    Locking jsonschema dep on v0.2
+
+commit 9a56c9b3d52f45af1acdcccb4f6ea6011579bac7
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sat Jun 2 12:42:26 2012 -0700
+
+    Fixing requirements
+
+commit 78cca7b414c45ceaacf621140c5483469e26d03d
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sat Jun 2 12:25:17 2012 -0700
+
+    Update README.md
+
+commit f123669b5acfb5c2d134fc6a15e1eee866234ddf
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sat Jun 2 12:15:33 2012 -0700
+
+    Fixing deps in tox.ini
+
+commit f428e0b51fc0d161be79478be1647abe5d2e3098
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sat Jun 2 12:12:19 2012 -0700
+
+    Add Python 2.6 to tox runner
+
+commit 155a5c29b099f71ec057c64c9dc5c1e8b6db9b62
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sat Jun 2 12:04:00 2012 -0700
+
+    Adding pep8 runner in tox.ini
+
+commit 6995f48c5ce48a472d689afd6de94aa54fa989d2
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Sat Jun 2 09:47:59 2012 -0700
+
+    Use jsonschema for operation validation
+
+commit c64a586a9a48c8e54e5c702376443767e723fca7
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jun 1 15:15:48 2012 -0700
+
+    Settling on warlock.model_factory
+    
+    Also making pylint happier
+
+commit 96ef8b7a5faa6b8c744e658f33923cb571f50564
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jun 1 15:00:38 2012 -0700
+
+    Add basic test and implement minimal logic
+
+commit 4160dc4e65dc4c5c8ba2f2245512586490072f60
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jun 1 14:34:50 2012 -0700
+
+    Renaming README to README.md
+
+commit b1f4a0b9d23fe8279ca2d17d391c34693892b1c2
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jun 1 14:33:49 2012 -0700
+
+    Adding README
+
+commit a5be0449637268b9d6822bcc7b359ba85b9e5f44
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jun 1 14:02:49 2012 -0700
+
+    Add Apache 2.0 LICENSE file
+
+commit bfcb925643a8362dc057c01313d2bb1f63ef778f
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jun 1 14:00:30 2012 -0700
+
+    Break out requirements into separate file
+
+commit 8b9d789ccc5ed1840e8a7173c304c86f954a5447
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jun 1 13:57:20 2012 -0700
+
+    Set reasonable version and add description
+
+commit 44a97e9723371bfaafc57074583559d297d1e88e
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jun 1 13:55:45 2012 -0700
+
+    Expanding .gitignore
+
+commit cd6467fe76502732dbd98232b138af6ce036652e
+Author: Brian Waldon <bcwaldon@gmail.com>
+Date:   Fri Jun 1 13:51:26 2012 -0700
+
+    Project bootstrapping
