@@ -1,0 +1,7 @@
+.venv
+build/
+dist/
+warlock.egg-info/
+.tox/
+*.swp
+*.pyc

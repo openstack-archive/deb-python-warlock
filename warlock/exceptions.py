@@ -12,24 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Core Warlock functionality"""
-
-import copy
-
-import model
+""" List of errors used in warlock """
 
 
-def model_factory(schema, base_class=model.Model):
-    """Generate a model class based on the provided JSON Schema
+class InvalidOperation(RuntimeError):
+    pass
 
-    :param schema: dict representing valid JSON schema
-    """
-    schema = copy.deepcopy(schema)
 
-    class Model(base_class):
-        def __init__(self, *args, **kwargs):
-            self.__dict__['schema'] = schema
-            base_class.__init__(self, *args, **kwargs)
-
-    Model.__name__ = str(schema['name'])
-    return Model
+class ValidationError(ValueError):
+    pass
