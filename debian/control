@@ -8,7 +8,7 @@ Uploaders: Loic Dachary (OuoU) <loic@debian.org>,
            Ghe Rivero <ghe.rivero@stackops.com>,
            Mehdi Abaakouk <sileht@sileht.net>
 Build-Depends: debhelper (>= 9), python-setuptools,  python-all (>= 2.6.6-3~),
- python-jsonschema, python-nose, openstack-pkg-tools
+ python-jsonschema, python-nose, openstack-pkg-tools, python-json-patch (>= 0.10)
 Standards-Version: 3.9.3
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/python-warlock.git
 Vcs-Git: git://anonscm.debian.org/openstack/python-warlock.git
