@@ -1,3 +1,10 @@
+python-warlock (1.0.0-1) unstable; urgency=low
+
+  * Now upstream release.
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 11 May 2013 06:50:16 +0000
+
 python-warlock (0.8.1-1) experimental; urgency=low
 
   * Initial release (Closes: #687510).
