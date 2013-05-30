@@ -7,8 +7,13 @@ Uploaders: Loic Dachary (OuoU) <loic@debian.org>,
            Thomas Goirand <zigo@debian.org>,
            Ghe Rivero <ghe.rivero@stackops.com>,
            Mehdi Abaakouk <sileht@sileht.net>
-Build-Depends: debhelper (>= 9), python-setuptools,  python-all (>= 2.6.6-3~),
- python-jsonschema, python-nose, openstack-pkg-tools, python-json-patch (>= 0.10)
+Build-Depends: debhelper (>= 9),
+               openstack-pkg-tools,
+               python-all (>= 2.6.6-3~),
+               python-json-patch (>= 0.10),
+               python-jsonschema,
+               python-nose,
+               python-setuptools
 Standards-Version: 3.9.3
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/python-warlock.git
 Vcs-Git: git://anonscm.debian.org/openstack/python-warlock.git
@@ -17,7 +22,10 @@ Homepage: http://pypi.python.org/pypi/warlock
 Package: python-warlock
 Architecture: all
 Pre-Depends: dpkg (>= 1.15.6~)
-Depends: ${python:Depends}, ${misc:Depends}, python-jsonschema (>= 0.7), python-json-patch (>= 0.10)
+Depends: python-json-patch (>= 0.10),
+         python-jsonschema (>= 0.7),
+         ${misc:Depends},
+         ${python:Depends}
 Description: object model built on top of JSON schema
  With python-warlock, you can build self-validating Python objects using JSON
  schemas. First, a schema describe the type of data, then after creating the
