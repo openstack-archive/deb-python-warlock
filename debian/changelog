@@ -2,6 +2,7 @@ python-warlock (1.0.1-1) unstable; urgency=low
 
   * New upstream release.
   * Ran wrap-and-sort.
+  * Standard-Version: is now 3.9.4.
 
  -- Thomas Goirand <zigo@debian.org>  Thu, 30 May 2013 15:47:07 +0800
 
