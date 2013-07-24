@@ -1,0 +1,104 @@
+Description: adds python3 support
+Author: Chuck Short <chuck.short@canonical.com>
+Forwarded: no
+Date: Thu, 23 May 2013 12:08:05 -0500
+
+Index: python-warlock-1.0.1-1ubuntu1/requirements.txt
+===================================================================
+--- python-warlock-1.0.1-1ubuntu1.orig/requirements.txt
++++ python-warlock-1.0.1-1ubuntu1/requirements.txt
+@@ -1,2 +1,3 @@
+ jsonschema>=0.7,<3
+ jsonpatch>=0.10,<2
++six
+Index: python-warlock-1.0.1-1ubuntu1/test/test_core.py
+===================================================================
+--- python-warlock-1.0.1-1ubuntu1.orig/test/test_core.py
++++ python-warlock-1.0.1-1ubuntu1/test/test_core.py
+@@ -16,6 +16,7 @@
+ import unittest
+ 
+ import warlock
++import six
+ 
+ 
+ fixture = {
+@@ -44,7 +45,7 @@
+ 
+     def test_class_name_from_unicode_schema_name(self):
+         fixture_copy = copy.deepcopy(fixture)
+-        fixture_copy['name'] = unicode(fixture_copy['name'])
++        fixture_copy['name'] = six.text_type(fixture_copy['name'])
+         # Can't set class.__name__ to a unicode object, ensure warlock
+         # does some magic to make it possible
+         warlock.model_factory(fixture_copy)
+@@ -81,7 +82,7 @@
+     def test_items(self):
+         Country = warlock.model_factory(fixture)
+         sweden = Country(name='Sweden', population=9379116)
+-        self.assertEqual(set(list(sweden.iteritems())),
++        self.assertEqual(set(list(six.iteritems(sweden))),
+                          set([('name', 'Sweden'), ('population', 9379116)]))
+         self.assertEqual(set(sweden.items()),
+                          set([('name', 'Sweden'), ('population', 9379116)]))
+@@ -104,7 +105,7 @@
+         mike_1['sub']['foo'] = 'james'
+         self.assertEquals(mike.sub['foo'], 'mike')
+ 
+-        mike_2 = dict(mike.iteritems())
++        mike_2 = dict(six.iteritems(mike))
+         mike_2['sub']['foo'] = 'james'
+         self.assertEquals(mike.sub['foo'], 'mike')
+ 
+@@ -112,7 +113,7 @@
+         mike_2['sub']['foo'] = 'james'
+         self.assertEquals(mike.sub['foo'], 'mike')
+ 
+-        mike_3_sub = list(mike.itervalues())[0]
++        mike_3_sub = list(six.itervalues(mike))[0]
+         mike_3_sub['foo'] = 'james'
+         self.assertEquals(mike.sub['foo'], 'mike')
+ 
+Index: python-warlock-1.0.1-1ubuntu1/warlock/core.py
+===================================================================
+--- python-warlock-1.0.1-1ubuntu1.orig/warlock/core.py
++++ python-warlock-1.0.1-1ubuntu1/warlock/core.py
+@@ -16,7 +16,7 @@
+ 
+ import copy
+ 
+-import model
++from . import model
+ 
+ 
+ def model_factory(schema, base_class=model.Model):
+Index: python-warlock-1.0.1-1ubuntu1/warlock/model.py
+===================================================================
+--- python-warlock-1.0.1-1ubuntu1.orig/warlock/model.py
++++ python-warlock-1.0.1-1ubuntu1/warlock/model.py
+@@ -20,7 +20,8 @@
+ import jsonpatch
+ import jsonschema
+ 
+-import exceptions
++from . import exceptions
++import six
+ 
+ 
+ class Model(dict):
+@@ -98,13 +99,13 @@
+         dict.update(self, other)
+ 
+     def iteritems(self):
+-        return copy.deepcopy(dict(self)).iteritems()
++        return six.iteritems(copy.deepcopy(dict(self)))
+ 
+     def items(self):
+         return copy.deepcopy(dict(self)).items()
+ 
+     def itervalues(self):
+-        return copy.deepcopy(dict(self)).itervalues()
++        return six.itervalues(copy.deepcopy(dict(self)))
+ 
+     def values(self):
+         return copy.deepcopy(dict(self)).values()
