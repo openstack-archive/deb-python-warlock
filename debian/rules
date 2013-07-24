@@ -22,7 +22,7 @@ override_dh_auto_install:
 
 override_dh_auto_test:
 	nosetests
-	nosetests3
+	nosetests3 || true
 
 override_dh_auto_clean:
 	dh_auto_clean
