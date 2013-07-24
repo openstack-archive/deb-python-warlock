@@ -1,4 +1,4 @@
-python-warlock (1.0.1-2) UNRELEASED; urgency=low
+python-warlock (1.0.1-2) unstable; urgency=low
 
   * Cleans correctly (package can build twice).
   * Adds python3 support (Closes: #717469).
