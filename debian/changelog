@@ -2,6 +2,8 @@ python-warlock (1.0.1-2) unstable; urgency=low
 
   * Cleans correctly (package can build twice).
   * Adds python3 support (Closes: #717469).
+  * Relicenses the packaging using Apache-2.0 (with prior agreement from
+    Canonical, see #717469).
 
  -- Thomas Goirand <zigo@debian.org>  Wed, 24 Jul 2013 15:01:57 +0800
 
