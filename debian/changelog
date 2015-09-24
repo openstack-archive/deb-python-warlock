@@ -3,6 +3,7 @@ python-warlock (1.1.0-1) unstable; urgency=medium
   * New upstream release.
   * Fixed (build-)depends for this release.
   * Added extend-diff-ignore = "^[^/]*[.]egg-info/" in debian/source/options.
+  * Standards-Version is now 3.9.6 (no change).
 
  -- Thomas Goirand <zigo@debian.org>  Thu, 24 Sep 2015 16:51:38 +0200
 
