@@ -2,35 +2,34 @@ Source: python-warlock
 Section: python
 Priority: optional
 Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
-Uploaders: Julien Danjou <acid@debian.org>,
-           Thomas Goirand <zigo@debian.org>,
-           Mehdi Abaakouk <sileht@sileht.net>
+Uploaders: Thomas Goirand <zigo@debian.org>,
 Build-Depends: debhelper (>= 9),
+               dh-python,
                openstack-pkg-tools,
-               python-all (>= 2.6.6-3~),
-               python-json-patch (>= 0.10),
-               python-jsonschema,
-               python-nose,
+               python-all,
                python-setuptools,
-               python-six,
-               python3-all (>= 3.1.2-7~),
-               python3-json-patch,
-               python3-jsonschema,
-               python3-nose,
+               python3-all,
                python3-setuptools,
-               python3-six
-Standards-Version: 3.9.4
+Build-Depends-Indep: python-jsonpatch,
+                     python-jsonschema,
+                     python-nose,
+                     python-six,
+                     python3-jsonpatch,
+                     python3-jsonschema,
+                     python3-nose,
+                     python3-six,
+Standards-Version: 3.9.6
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=openstack/python-warlock.git
 Vcs-Git: git://anonscm.debian.org/openstack/python-warlock.git
 Homepage: http://pypi.python.org/pypi/warlock
 
 Package: python-warlock
 Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
-Depends: python-json-patch (>= 0.10),
-         python-jsonschema (>= 0.7),
+Depends: python-jsonpatch,
+         python-jsonschema,
+         python-six,
          ${misc:Depends},
-         ${python:Depends}
+         ${python:Depends},
 Description: object model built on top of JSON schema - python 2.x
  With python-warlock, you can build self-validating Python objects using JSON
  schemas. First, a schema describe the type of data, then after creating the
@@ -41,11 +40,11 @@ Description: object model built on top of JSON schema - python 2.x
 
 Package: python3-warlock
 Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
-Depends: python3-json-patch (>= 0.10),
-         python3-jsonschema (>= 0.7),
+Depends: python3-jsonpatch,
+         python3-jsonschema,
+         python3-six,
          ${misc:Depends},
-         ${python3:Depends}
+         ${python3:Depends},
 Description: object model built on top of JSON schema - python 3.x
  With python-warlock, you can build self-validating Python objects using JSON
  schemas. First, a schema describe the type of data, then after creating the
