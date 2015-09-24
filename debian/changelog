@@ -6,6 +6,7 @@ python-warlock (1.1.0-1) unstable; urgency=medium
   * Standards-Version is now 3.9.6 (no change).
   * Drops debian/patches/python3.patch applied upstream.
   * Fixed watch file to use the pypi redirector.
+  * Fixed long desc.
 
  -- Thomas Goirand <zigo@debian.org>  Thu, 24 Sep 2015 16:51:38 +0200
 

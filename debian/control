@@ -30,13 +30,13 @@ Depends: python-jsonpatch,
          python-six,
          ${misc:Depends},
          ${python:Depends},
-Description: object model built on top of JSON schema - python 2.x
- With python-warlock, you can build self-validating Python objects using JSON
- schemas. First, a schema describe the type of data, then after creating the
- object, python-warlock checks that added or edited attributes correspond to
- the initial schema. If they don't, an exception is raised.
+Description: object model built on top of JSON schema - python 2.7
+ With Warlock, you can build self-validating Python objects using JSON schemas.
+ First, a schema describe the type of data, then after creating the object,
+ Warlock checks that added or edited attributes correspond to the initial
+ schema. If they don't, an exception is raised.
  .
- This package contains the Python 2.x module.
+ This package contains the Python 2.7 module.
 
 Package: python3-warlock
 Architecture: all
@@ -46,9 +46,9 @@ Depends: python3-jsonpatch,
          ${misc:Depends},
          ${python3:Depends},
 Description: object model built on top of JSON schema - python 3.x
- With python-warlock, you can build self-validating Python objects using JSON
- schemas. First, a schema describe the type of data, then after creating the
- object, python-warlock checks that added or edited attributes correspond to
- the initial schema. If they don't, an exception is raised.
+ With Warlock, you can build self-validating Python objects using JSON schemas.
+ First, a schema describe the type of data, then after creating the object,
+ Warlock checks that added or edited attributes correspond to the initial
+ schema. If they don't, an exception is raised.
  .
  This package contains the Python 3.x module.
