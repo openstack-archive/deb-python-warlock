@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: python-warlock
-Source: git://github.com/bcwaldon/warlock.git
+Source: https://github.com/bcwaldon/warlock
 
 Files: debian/*
 Copyright: 2012 Canonical Ltd
