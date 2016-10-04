@@ -1,4 +1,4 @@
-python-warlock (1.1.0-2) UNRELEASED; urgency=medium
+python-warlock (1.1.0-2) unstable; urgency=medium
 
   * Fixed homepage (https).
   * Fixed VCS URLs (https).
